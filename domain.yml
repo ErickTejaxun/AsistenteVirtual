@@ -2,18 +2,80 @@ session_config:
   session_expiration_time: 60.0
   carry_over_slots_to_new_session: true
 intents:
-- greet
+- afirmation
+- negation
 - statetv
 - turnontv
 - turnofftv
-- afirmation
-- negation
+- search
+- searchyoutube
+- rungoogle
+- turnonspeakers
+- getvolumen
+- upvolumen
+- downvolumen
+- turnonlights
+- turnofflights
+- getstateblind
+- stateengineblind
+- upblind
+- upfewblind
+- downfewblind
+- downblind
+- stopblind
+- runskype
+- runfirefox
+- greet
+- goodbye
+entities:
+- monitor
 responses:
+  utter_search:
+  - text: Abriendo navegador con tu búsqueda
+  utter_searchyoutube:
+  - text: Abriendo youtube con tu búsqueda
+  utter_rungoogle:
+  - text: Lanzando google
+  utter_turnonspeakers:
+  - text: Encendiendo los speakers
+  utter_getvolumen:
+  - text: El volumen está al %
+  utter_upvolumen:
+  - text: Subiendo volumen de speakers
+  utter_downvolumen:
+  - text: Bajando volumen speakers
+  utter_turnonlights:
+  - text: Encendiendo luces de robolab
+  utter_turnofflights:
+  - text: Apagando luces de robolab
+  utter_getstateblind:
+  - text: Las persinas se encuentan en este nivel
+  utter_getstateengineblind:
+  - text: Las persianas se están moviendo
+  utter_upblind:
+  - text: Subiendo las persianas.
+  utter_downblind:
+  - text: Bajando las persianas.
+  utter_upfewblind:
+  - text: Subiendo un poco las persianas
+  utter_downfewblind:
+  - text: Bajando un poco las persianas
+  utter_stopblind:
+  - text: Se han detenido las persianas
+  utter_runskype:
+  - text: Ejecutando skype
+  utter_runfirefox:
+  - text: Ejecutando firefox
   utter_statetv:
   - text: El monitor se encuentra
   utter_saludo:
   - text: Hola, me llamo bot.
   - text: Hola, ¿cómo estás?.
+  utter_despedir:
+  - text: Adiós.
+  - text: Venga, hasta luego.
+  - text: Bye
+  - text: Nos vemos
   utter_turnontv:
   - text: Enciendendo pantalla
   utter_turnofftv:
@@ -23,3 +85,22 @@ actions:
 - utter_saludo
 - utter_turnontv
 - utter_turnofftv
+- utter_despedir
+- utter_search
+- utter_searchyoutube
+- utter_rungoogle
+- utter_turnonspeakers
+- utter_getvolumen
+- utter_upvolumen
+- utter_downvolumen
+- utter_turnonlights
+- utter_turnofflights
+- utter_getstateblind
+- utter_getstateengineblind
+- utter_upblind
+- utter_downblind
+- utter_upfewblind
+- utter_downfewblind
+- utter_stopblind
+- utter_runskype
+- utter_runfirefox
