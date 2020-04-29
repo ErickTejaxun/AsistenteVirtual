@@ -1,7 +1,7 @@
 
 ## preguntar por tv
 * statetv
-  - utter_statetv
+  - action_statetv
 * turnontv 
   - utter_turnontv
 * turnofftv

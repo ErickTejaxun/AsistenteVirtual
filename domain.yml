@@ -27,6 +27,7 @@ intents:
 - runfirefox
 - greet
 - goodbye
+
 entities:
 - monitor
 responses:
@@ -66,7 +67,7 @@ responses:
   - text: Ejecutando skype
   utter_runfirefox:
   - text: Ejecutando firefox
-  utter_statetv:
+  action_statetv:
   - text: El monitor se encuentra
   utter_saludo:
   - text: Hola, me llamo bot.
@@ -81,7 +82,7 @@ responses:
   utter_turnofftv:
   - text: Apagando pantalla
 actions:
-- utter_statetv
+- action_statetv
 - utter_saludo
 - utter_turnontv
 - utter_turnofftv

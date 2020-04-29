@@ -9,6 +9,13 @@
 - ¿boot?
 - ¿estás allí?
 - ¿hola qué hace?
+- como estás?
+- que hacés?
+- Hola
+- Cómo estás?
+- No, te estoy saludando
+- Qué haces
+- Ola
 
 ## intent:goodbye
 - adiós
@@ -21,6 +28,7 @@
 - see you later
 - bye
 - chao
+- Adiós
 
 ## intent:afirmation
 - si
@@ -60,35 +68,99 @@
 - ¿ y la pantalla?
 - ¿ y el monitor?
 - ¿está encendido el monitor?
-- ![tv]¡
-- estado del [tv]
-- y [tv]
-- ¿cómo está la [tv]?
-- ¿alguien está usando [tv]?
+- !televisor¡
+- !pantalla!
+- estado de la pantalla
+- estado del monitor
+- estado del tv
+- y la tv?
+- ¿y el monitor?
+- ¿está encendida la pantalla?
+- ¿la pantalla?
+- estado pantalla
+- y la pantalla?
+- pantalla?
+- la pantalla
+- Tv
+- Teve
+- ¿Tienes pantalla?
 
 ## intent:turnontv
-- enciende  [tv]
-- encender [tv]
-- prende [tv]
-- arriba [tv]
-- turn off [tv]
-- prende ese [tv]
-- necesito ver algo en ese [tv]
-- quiero ver algo en [tv]
-- muestrame lo que hay en [tv]
-- quiero ver [tv]
-- activa [tv]
-- necesito [tv]
-- que prendas [tv]
+- enciende la pantalla
+- enciende el tv
+- enciende el monitor
+- enciéndeme la pantalla
+- enciéndeme el monitor
+- enciéndem el tv
+- encerder pantalla
+- encender tv
+- encender el monitor
+- prende tv
+- prende pantalla
+- prende el monitor
+- arriba la pantalla
+- arriba el monitor
+- arriba la tv
+- turn on tv
+- turn on television
+- turn on pantalla
+- turn on monitor
+- prende esa pantalla
+- prende ese monitor
+- prende esa tv
+- prende esa televisión
+- necesito ver algo en la televisión
+- necesito ver el monitor
+- necesito ver la pantalla
+- necesito que prendas la pantalla
+- quiero ver algo en la pantalla
+- quiero ver el monitor
+- quiero ver algo en esa pantalla
+- muestŕame que hay en pantalla
+- muestráme que hay en el monitor
+- muestráme que hay en tv
+- necesito ver algo en pantalla
+- necesito que muestres la pantalla
+- quiero ver la pantalla
+- quiero ver la tv
+- activa tv
+- activa pantalla
+- activa monitor
+- activa la televisión
+- que prendas la pantalla
+- que prendas el monitor
+- Enciende la pantalla
 
 ## intent:turnofftv
-- apaga [tv]
-- abajo esa [tv]
-- abajo [tv]
-- turn off [tv]
-- ya no quiero ver [tv]
-- [tv] ya no es útil
-- desactiva [tv]
+- apaga la pantalla
+- abajo esa pantalla
+- turn off la pantalla
+- ya no necesito la pantalla
+- la pantalla ya no es útil
+- desactiva la pantalla
+- por favor, apaga la pantalla
+- apaga el monitor
+- abajo ese monitor
+- turn off monitor
+- ya no necesito el monitor
+- el monitor ya no es útil
+- desactiva el monitor
+- por favor, apaga el monitor
+- apaga el tv
+- abajo ese tv
+- turn off tv
+- ya no necesito el tv
+- la tv ya no es útil
+- desactiva la tv
+- por favor, apaga la tv
+- apaga el televisor
+- abajo ese televisor
+- turn off televisor
+- ya no necesito el televisor
+- el televisor ya no es útil
+- desactiva el televisor
+- por favor, apaga el televisor
+- Apaga pantalla
 
 ## intent:search
 - búscame en internet qué es [cualquiercosa]
@@ -116,58 +188,154 @@
 - muéstrame google
 - quiero buscar en google
 - lanza google
+- run google
+- abreme google
+- necesito buscar algo en google
+- muestra el búscador
+- google
+- necesito que lances google
+- abréme google
+- abréme el búscador
+- voy a buscar algo
 
 ## intent:turnonspeakers
-- enciende [speakers]
-- turn on [speakers]
-- enciéndeme [speakers]
+- enciende bocinas
+- turn on bocinas
+- enciéndeme las bocinas
+- enciende las bocinas
+- turn on las bocinas
+- enciende el altoparlante
+- turn on altoparlante
+- enciéndeme el altoparlante
+- enciende speakers
+- turn on speakers
+- enciendéme los speakers
+- no se escucha, enciende bocinas
+- necesito escuchar algo
+- no se escucha nada
+
 
 ## intent:getvolumen
 - muéstrame el volumen
-- cuánto tiene de volumen [speakers]
-- necesito saber cuánto volumen tienen [speakers]
+- ¿cuál es el nivel del volumen?
+- cuánto volumen hay
+- cuánto volumen tiene las bocinas
+- ¿cuál es el nivel de las bocinas?
+- necesito saber el nivel de las bocinas
+- quiero saber el nivel del volumen
+- dime el nivel de las bocinas
+- dime el nivel de los speakers
+- quiero saber cuánto volumen tienen las bocinas
+- dime el nivel de las bocinas
 - ¿cuál es el volumen actual?
-- muestrame [speakers]
+- cuál es el nivel de volumen
+- muestráme el nivel de volumen
+- qué tan fuerte está el sonido
+- el nivel del sonido
+- ¿qué tanto volumen hay?
+
 
 ## intent:upvolumen
 - subir volumen
+- sube el volumen de las bocinas
 - más volumen
+- subele a las bocinas
+- subele a los parlantes
+- subele a los speakers
 - necesito más volumen
-- no se escucha nada
+- ¿podrías subir el volumen?
+- podrías darme más volumen?
+- podrías subirle al sonido?
+- casi no escucho, subele al volumen
+- necesito que suene más 
+- necesito más volumen en los parlantes
+- necesito más volumen en las bocinas
+- necesito más volumen en los speakers
 - sube el volumen
+- que le subas al volumen
+
 
 ## intent:downvolumen
 - bajar volumen
-- menos volumen
+- bájale al volumen
+- ¿podrías bajar el volumen?
+- podrías bajar el volumen ?
+- quiero menos sonido
 - necesito menos volumen
 - quiero menos volumen
 - puedes bajar el volumen
+- puedes bajar el volumen?
+- quiero que suene menos esas bocinas?
 - se escucha demasiado alto
 - que bajes el volumen
+- necesito menos volumen en los parlantes
+- necesito menos volumen en las bocinas
+- necesito menos volumen en los speakers
 
 ## intent:turnonlights
-- prender [lights]
-- enciende [lights]
-- arriba [lights]
-- encender [lights]
-- prende [lights]
-- turn on [lights]
+- prender luces
+- enciende las luces
+- arriba las luces
+- encender luces
+- prende las luces
+- turn on las luces
 - no se ve nada
 - no veo nada
 - nadie ve nada
+- prender focos
+- prender lámparas
+- enciende las lámparas
+- enciende las luces
+- arriba las lámparas
+- encerder las lámparas
+- prende las lámparas
+- por favor, enciende las luces
+- que me prendas las luces
+- necesito luz 
+- que no veo nada
+- quiero que enciendas las luces
+- quiero que enciendas las lámparas
+- necesito que prendas las luces
+- necesito que enciedas las lámparas
+- no veo nada, enciende las luces
+- no se ve nada
+- turn on luces
+- turn on lámparas
+- turn on lights
+- enciende todas esas luces
+
 
 ## intent:turnofflights
-- apaga [lights]
-- apágame [lights]
-- no quiero [light]
-- me sobra [light]
-- no necesito [lights]
-- por favor, apaga [lights]
-- quita [lights]
+- apagar luces
+- apágame las luces
+- no quiero las luces
+- me sobran las luces
+- apagar las luces
+- turn on las luces
+- apagáme las luces
+- apagar focos
+- apaga lámparas
+- apaga las lámparas
+- baja las luces
+- abajo las lámparas
+- apagar las lámparas
+- apagáme las lámparas
+- por favor, apaga las luces
+- que me apagues las luces
+- no necesito luz 
+- quiero que apagues las luces
+- quiero que me apagues las lámparas
+- necesito que bajes las luces
+- necesito que apagues las lámparas
+- turn off luces
+- turn off lámparas
+- turn off lights
+- apagáme todas esas luces
+
 
 ## intent:getstateblind
 - ¿cómo están las persianas?
-- qué posición tiene las persianas.
+- ¿qué posición tiene las persianas?
 - dime como están las persianas
 - ¿cuál es la posición de las persianas?
 - dame la posición de las persianas
@@ -175,6 +343,8 @@
 - indicar persianas
 - posición persiana
 - Posición persiana
+- Persiana
+- Estado de las persianas
 
 ## intent:stateengineblind
 - ¿se mueven las persianas?
@@ -264,48 +434,44 @@
 - ejecutar [firefox]
 - ejecuta [firefox]
 - usar [firefox]
+- [firefox]
 
 ## synonym:firefox
-- fairfox
 - navegador web
-- firefox
 - mozila
+- fairfox
+- firefox
 - navegador
 
 ## synonym:ligths
 - el foco
-- las bombillas
-- las luces
-- la luz
-- todas las luces
 - la bombilla
+- las bombillas
+- la luz
 - los focos
+- todas las luces
+- las luces
 
 ## synonym:skype
-- scap
-- escaipi
-- skaipi
 - videollamada
-- escapi
-- scaip
 - skype
 
 ## synonym:speakers
-- bocina
-- spakers
 - bocinas
 - altoparlante
 - altoparlantes
+- bocina
+- spakers
 
 ## synonym:tv
+- pantalla
 - el televisor
-- el monitor
 - la pantalla
 - teve
-- monitor
-- pantalla
-- televisor
 - el teve
+- monitor
+- el monitor
+- televisor
 
 ## regex:cualquiercosa
-- :[^\"]
+- [^\n]
