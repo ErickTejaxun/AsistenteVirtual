@@ -1,0 +1,18 @@
+[
+  {
+    "text": "turn on las luces",
+    "intent": "turnofflights",
+    "intent_prediction": {
+      "name": "turnonlights",
+      "confidence": 0.6499732732772827
+    }
+  },
+  {
+    "text": "persianas un poco abajo",
+    "intent": "downblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.7831785678863525
+    }
+  }
+]
