@@ -24,13 +24,12 @@ class ActionHelloWorld(Action):
 
 class ActionStateTv(Action):
     def name(self) -> Text:
-        return "action_statetv"
-    
+        return "action_statetv"    
     def run(self, 
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-                        
+
         mensaje = "La pantalla está " + str(random())
         dispatcher.utter_message(text=mensaje)
         return []

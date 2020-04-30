@@ -1,0 +1,351 @@
+2020-04-29 23:02:50,015 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-29 23:04:27,749 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/parsing'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /parsing not found
+2020-04-29 23:29:02,493 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-29 23:52:31,170 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-29 23:52:58,984 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 1167, in run
+    serve(**server_settings)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/server.py", line 892, in serve
+    trigger_events(before_start, loop)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/server.py", line 668, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1450, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1443, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1351, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 519, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 436, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 90, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 68, in uvloop.loop.Handle._run
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/run.py", line 234, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(endpoints.nlu or nlu_model)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 274, in __init__
+    self._load_interpreter()
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 297, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/components.py", line 643, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/registry.py", line 231, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 845, in load
+    index_tag_id_mapping, label_data, meta, data_example, model_dir
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 921, in _load_model
+    model.build_for_predict(predict_data_example)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/utils/tensorflow/models.py", line 138, in build_for_predict
+    predict_data.as_tf_dataset, self.batch_predict, eager, "prediction"
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/utils/tensorflow/models.py", line 223, in _get_tf_call_model_function
+    tf_call_model_function(next(iter(init_dataset)))
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/def_function.py", line 568, in __call__
+    result = self._call(*args, **kwds)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/def_function.py", line 615, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/def_function.py", line 497, in _initialize
+    *args, **kwds))
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 2389, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 2703, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/function.py", line 2593, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/framework/func_graph.py", line 978, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/eager/def_function.py", line 439, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/framework/func_graph.py", line 964, in wrapper
+    user_requested=True,
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py", line 565, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "/tmp/tmp3qlz_grj.py", line 13, in tf__batch_predict
+    text_transformed, _, _, _ = ag__.converted_call(self._create_sequence, (tf_batch_data[TEXT_FEATURES], mask_text, self.text_name), None, fscope)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py", line 567, in converted_call
+    result = converted_f(*effective_args)
+  File "/tmp/tmpqas01ylt.py", line 45, in tf___create_sequence
+    outputs = ag__.converted_call(self._tf_layers[f'{name}_transformer'], (x, 1 - mask, self._training), None, fscope)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py", line 459, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py", line 332, in _call_unconverted
+    return f(*args)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/base_layer.py", line 778, in __call__
+    outputs = call_fn(cast_inputs, *args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py", line 234, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/api.py", line 526, in converted_call
+    converted_f = conversion.convert(target_entity, program_ctx)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/conversion.py", line 326, in convert
+    free_nonglobal_var_names)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/conversion.py", line 240, in _convert_with_cache
+    entity, program_ctx)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/conversion.py", line 475, in convert_entity_to_ast
+    nodes, name, entity_info = convert_func_to_ast(o, program_ctx)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/conversion.py", line 673, in convert_func_to_ast
+    node = node_to_graph(node, context)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/impl/conversion.py", line 712, in node_to_graph
+    node = converter.apply_(node, context, continue_statements)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/core/converter.py", line 408, in apply_
+    node = standard_analysis(node, context)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/core/converter.py", line 384, in standard_analysis
+    node = activity.resolve(node, context, None)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 534, in resolve
+    return ActivityAnalyzer(context, parent_scope).visit(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/transformer.py", line 480, in visit
+    result = super(Base, self).visit(node)
+  File "/usr/lib/python3.6/ast.py", line 253, in visit
+    return visitor(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 473, in visit_FunctionDef
+    node.body = self.visit_block(node.body)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/transformer.py", line 371, in visit_block
+    replacement = self.visit(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/transformer.py", line 480, in visit
+    result = super(Base, self).visit(node)
+  File "/usr/lib/python3.6/ast.py", line 253, in visit
+    return visitor(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 488, in visit_With
+    node = self.generic_visit(node)
+  File "/usr/lib/python3.6/ast.py", line 308, in generic_visit
+    value = self.visit(value)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/transformer.py", line 480, in visit
+    result = super(Base, self).visit(node)
+  File "/usr/lib/python3.6/ast.py", line 253, in visit
+    return visitor(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 518, in visit_For
+    (node.orelse, NodeAnno.ORELSE_SCOPE)))
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 392, in _process_parallel_blocks
+    parent = self._process_block_node(parent, child, scope_name)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 379, in _process_block_node
+    block = self.visit_block(block)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/transformer.py", line 371, in visit_block
+    replacement = self.visit(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/transformer.py", line 480, in visit
+    result = super(Base, self).visit(node)
+  File "/usr/lib/python3.6/ast.py", line 253, in visit
+    return visitor(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 315, in visit_Assign
+    return self._process_statement(node)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/autograph/pyct/static_analysis/activity.py", line 304, in _process_statement
+    node = self.generic_visit(node)
+  File "/usr/lib/python3.6/ast.py", line 307, in generic_visit
+    if isinstance(value, AST):
+  File "/home/erick/.local/lib/python3.6/site-packages/socketio/client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-04-29 23:53:19,616 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:03:03,788 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:07:35,409 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/parse'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /parse not found
+2020-04-30 00:16:30,886 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:18:35,523 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:20:37,802 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:21:14,823 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 1167, in run
+    serve(**server_settings)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/server.py", line 892, in serve
+    trigger_events(before_start, loop)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/server.py", line 668, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1450, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1443, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1351, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 519, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 436, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 90, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 68, in uvloop.loop.Handle._run
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/run.py", line 234, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(endpoints.nlu or nlu_model)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 274, in __init__
+    self._load_interpreter()
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 297, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/components.py", line 643, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/registry.py", line 231, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 845, in load
+    index_tag_id_mapping, label_data, meta, data_example, model_dir
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 908, in _load_model
+    config=meta,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/utils/tensorflow/models.py", line 161, in load
+    model = cls(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 938, in __init__
+    super().__init__(name="DIET", random_seed=config[RANDOM_SEED])
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/utils/tensorflow/models.py", line 29, in __init__
+    self.total_loss = tf.keras.metrics.Mean(name="t_loss")
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/metrics.py", line 460, in __init__
+    reduction=metrics_utils.Reduction.WEIGHTED_MEAN, name=name, dtype=dtype)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/metrics.py", line 296, in __init__
+    'total', initializer=init_ops.zeros_initializer)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/metrics.py", line 276, in add_weight
+    aggregation=aggregation)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/base_layer.py", line 446, in add_weight
+    caching_device=caching_device)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/training/tracking/base.py", line 744, in _add_variable_with_custom_getter
+    **kwargs_for_getter)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/base_layer_utils.py", line 142, in make_variable
+    shape=variable_shape if variable_shape else None)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 258, in __call__
+    return cls._variable_v1_call(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 219, in _variable_v1_call
+    shape=shape)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 197, in <lambda>
+    previous_getter = lambda **kwargs: default_variable_creator(None, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variable_scope.py", line 2596, in default_variable_creator
+    shape=shape)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 262, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 1411, in __init__
+    distribute_strategy=distribute_strategy)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 1557, in _init_from_args
+    graph_mode=self._in_graph_mode)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 232, in eager_safe_variable_handle
+    shape, dtype, shared_name, name, graph_mode, initial_value)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 164, in _variable_handle_from_shape_and_dtype
+    math_ops.logical_not(exists), [exists], name="EagerVariableNameReuse")
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/gen_math_ops.py", line 5451, in logical_not
+    tld.op_callbacks, x)
+  File "/home/erick/.local/lib/python3.6/site-packages/socketio/client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-04-30 00:21:16,561 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:21:32,793 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 1167, in run
+    serve(**server_settings)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/server.py", line 892, in serve
+    trigger_events(before_start, loop)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/server.py", line 668, in trigger_events
+    loop.run_until_complete(result)
+  File "uvloop/loop.pyx", line 1450, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1443, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1351, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 519, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 436, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 90, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 68, in uvloop.loop.Handle._run
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/run.py", line 234, in load_agent_on_start
+    _interpreter = NaturalLanguageInterpreter.create(endpoints.nlu or nlu_model)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 54, in create
+    return RasaNLUInterpreter(model_directory=obj)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 274, in __init__
+    self._load_interpreter()
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/interpreter.py", line 297, in _load_interpreter
+    self.interpreter = Interpreter.load(self.model_directory)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/model.py", line 301, in load
+    return Interpreter.create(model_metadata, component_builder, skip_validation)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/model.py", line 328, in create
+    component_meta, model_metadata.model_dir, model_metadata, **context
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/components.py", line 643, in load_component
+    component_meta, model_dir, model_metadata, cached_component, **context
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/registry.py", line 231, in load_component_by_meta
+    component_meta, model_dir, metadata, cached_component, **kwargs
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 845, in load
+    index_tag_id_mapping, label_data, meta, data_example, model_dir
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 908, in _load_model
+    config=meta,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/utils/tensorflow/models.py", line 161, in load
+    model = cls(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/nlu/classifiers/diet_classifier.py", line 938, in __init__
+    super().__init__(name="DIET", random_seed=config[RANDOM_SEED])
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/utils/tensorflow/models.py", line 29, in __init__
+    self.total_loss = tf.keras.metrics.Mean(name="t_loss")
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/metrics.py", line 460, in __init__
+    reduction=metrics_utils.Reduction.WEIGHTED_MEAN, name=name, dtype=dtype)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/metrics.py", line 296, in __init__
+    'total', initializer=init_ops.zeros_initializer)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/metrics.py", line 276, in add_weight
+    aggregation=aggregation)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/base_layer.py", line 446, in add_weight
+    caching_device=caching_device)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/training/tracking/base.py", line 744, in _add_variable_with_custom_getter
+    **kwargs_for_getter)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/keras/engine/base_layer_utils.py", line 142, in make_variable
+    shape=variable_shape if variable_shape else None)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 258, in __call__
+    return cls._variable_v1_call(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 219, in _variable_v1_call
+    shape=shape)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 197, in <lambda>
+    previous_getter = lambda **kwargs: default_variable_creator(None, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variable_scope.py", line 2596, in default_variable_creator
+    shape=shape)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/variables.py", line 262, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 1411, in __init__
+    distribute_strategy=distribute_strategy)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 1557, in _init_from_args
+    graph_mode=self._in_graph_mode)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 232, in eager_safe_variable_handle
+    shape, dtype, shared_name, name, graph_mode, initial_value)
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py", line 164, in _variable_handle_from_shape_and_dtype
+    math_ops.logical_not(exists), [exists], name="EagerVariableNameReuse")
+  File "/home/erick/.local/lib/python3.6/site-packages/tensorflow_core/python/ops/gen_math_ops.py", line 5451, in logical_not
+    tld.op_callbacks, x)
+  File "/home/erick/.local/lib/python3.6/site-packages/socketio/client.py", line 25, in signal_handler
+    return original_signal_handler(sig, frame)
+KeyboardInterrupt
+2020-04-30 00:22:42,365 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:31:23,574 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:33:13,492 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:36:46,647 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-04-30 00:38:41,315 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/parse'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/parse
+2020-04-30 00:50:19,039 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/parse?q=terrible'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /parse not found
+2020-04-30 00:50:24,007 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/parse?q=terrible'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 452, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/parse
+2020-04-30 01:04:14,518 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/parse'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /parse not found

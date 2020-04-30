@@ -2,10 +2,7 @@
 ## preguntar por tv
 * statetv
   - action_statetv
-* turnontv 
-  - utter_turnontv
-* turnofftv
-  - utter_turnofftv
+
 
 ## saludar 
 * greet 
@@ -95,3 +92,8 @@
 ## ejectuar navegador
 * runfirefox
   - utter_runfirefox
+
+## interactive_story_1
+* greet
+    - utter_saludo
+* turnontv

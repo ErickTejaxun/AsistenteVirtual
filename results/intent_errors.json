@@ -1,10 +1,506 @@
 [
   {
+    "text": "¿Cómo lo llevas?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "getstateblind",
+      "confidence": 0.26999783515930176
+    }
+  },
+  {
+    "text": "bueno, me voy",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "downvolumen",
+      "confidence": 0.3521745502948761
+    }
+  },
+  {
+    "text": "chao",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5618088841438293
+    }
+  },
+  {
+    "text": "mola",
+    "intent": "afirmation",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8190501928329468
+    }
+  },
+  {
+    "text": "necesito luz",
+    "intent": "turnonlights",
+    "intent_prediction": {
+      "name": "turnofflights",
+      "confidence": 0.32513564825057983
+    }
+  },
+  {
+    "text": "no necesito luz",
+    "intent": "turnofflights",
+    "intent_prediction": {
+      "name": "negation",
+      "confidence": 0.3062809705734253
+    }
+  },
+  {
+    "text": "dime como están las persianas",
+    "intent": "getstateblind",
+    "intent_prediction": {
+      "name": "stateengineblind",
+      "confidence": 0.4961957335472107
+    }
+  },
+  {
+    "text": "Persiana",
+    "intent": "getstateblind",
+    "intent_prediction": {
+      "name": "upblind",
+      "confidence": 0.750142514705658
+    }
+  },
+  {
+    "text": "¿se mueven las persianas?",
+    "intent": "stateengineblind",
+    "intent_prediction": {
+      "name": "getstateblind",
+      "confidence": 0.21255537867546082
+    }
+  },
+  {
+    "text": "persianas a la mitad",
+    "intent": "upfewblind",
+    "intent_prediction": {
+      "name": "turnofftv",
+      "confidence": 0.3429850935935974
+    }
+  },
+  {
+    "text": "abajo persiana",
+    "intent": "downfewblind",
+    "intent_prediction": {
+      "name": "downblind",
+      "confidence": 0.887503445148468
+    }
+  },
+  {
+    "text": "no bajes persiana",
+    "intent": "stopblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.47099584341049194
+    }
+  },
+  {
+    "text": "no bajes la persiana",
+    "intent": "stopblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.48097601532936096
+    }
+  },
+  {
+    "text": "buenos días",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4729800224304199
+    }
+  },
+  {
+    "text": "buenas tardes",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.36062726378440857
+    }
+  },
+  {
+    "text": "¿boot?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "afirmation",
+      "confidence": 0.3887314200401306
+    }
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "afirmation",
+      "confidence": 0.7754213809967041
+    }
+  },
+  {
+    "text": "guay",
+    "intent": "afirmation",
+    "intent_prediction": {
+      "name": "statetv",
+      "confidence": 0.4679121971130371
+    }
+  },
+  {
+    "text": "no, hombre",
+    "intent": "negation",
+    "intent_prediction": {
+      "name": "afirmation",
+      "confidence": 0.4821331799030304
+    }
+  },
+  {
+    "text": "bájale al volumen",
+    "intent": "downvolumen",
+    "intent_prediction": {
+      "name": "upvolumen",
+      "confidence": 0.9344741106033325
+    }
+  },
+  {
+    "text": "¿está encendida la persiana?",
+    "intent": "stateengineblind",
+    "intent_prediction": {
+      "name": "statetv",
+      "confidence": 0.48359641432762146
+    }
+  },
+  {
+    "text": "¿cómo está el motor de las persianas?",
+    "intent": "stateengineblind",
+    "intent_prediction": {
+      "name": "getstateblind",
+      "confidence": 0.671134352684021
+    }
+  },
+  {
+    "text": "sube la persiana un poco",
+    "intent": "upfewblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.37106001377105713
+    }
+  },
+  {
+    "text": "sube un poco la persiana",
+    "intent": "upfewblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.3708226978778839
+    }
+  },
+  {
+    "text": "no bajes mucho la persiana",
+    "intent": "downfewblind",
+    "intent_prediction": {
+      "name": "stopblind",
+      "confidence": 0.5572354793548584
+    }
+  },
+  {
+    "text": "¿puedes bajar toda la persiana?",
+    "intent": "downblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.3775652050971985
+    }
+  },
+  {
+    "text": "cierra las persianas",
+    "intent": "downblind",
+    "intent_prediction": {
+      "name": "stateengineblind",
+      "confidence": 0.3438984155654907
+    }
+  },
+  {
+    "text": "cerrar persianas",
+    "intent": "downblind",
+    "intent_prediction": {
+      "name": "getstateblind",
+      "confidence": 0.43538838624954224
+    }
+  },
+  {
+    "text": "cancelar persiana",
+    "intent": "stopblind",
+    "intent_prediction": {
+      "name": "getstateblind",
+      "confidence": 0.5802900791168213
+    }
+  },
+  {
+    "text": "No, te estoy saludando",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "stateengineblind",
+      "confidence": 0.47474023699760437
+    }
+  },
+  {
+    "text": "nos vemos",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "downvolumen",
+      "confidence": 0.40956148505210876
+    }
+  },
+  {
+    "text": "que descanses",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "afirmation",
+      "confidence": 0.3376009464263916
+    }
+  },
+  {
+    "text": "estoy esperando a que lo hagas",
+    "intent": "afirmation",
+    "intent_prediction": {
+      "name": "negation",
+      "confidence": 0.5788785219192505
+    }
+  },
+  {
+    "text": "no quiero",
+    "intent": "negation",
+    "intent_prediction": {
+      "name": "turnofftv",
+      "confidence": 0.5772483944892883
+    }
+  },
+  {
+    "text": "búscame qué es [cualquiercosa]",
+    "intent": "search",
+    "intent_prediction": {
+      "name": "searchyoutube",
+      "confidence": 0.619137167930603
+    }
+  },
+  {
+    "text": "no se ve nada",
+    "intent": "turnonlights",
+    "intent_prediction": {
+      "name": "turnonspeakers",
+      "confidence": 0.444305956363678
+    }
+  },
+  {
     "text": "turn on las luces",
     "intent": "turnofflights",
     "intent_prediction": {
       "name": "turnonlights",
-      "confidence": 0.6499732732772827
+      "confidence": 0.9766736626625061
+    }
+  },
+  {
+    "text": "¿cómo están las persianas?",
+    "intent": "getstateblind",
+    "intent_prediction": {
+      "name": "stateengineblind",
+      "confidence": 0.912219762802124
+    }
+  },
+  {
+    "text": "persiana up",
+    "intent": "upblind",
+    "intent_prediction": {
+      "name": "getstateblind",
+      "confidence": 0.28911080956459045
+    }
+  },
+  {
+    "text": "puedes subir un poco esta persiana",
+    "intent": "upfewblind",
+    "intent_prediction": {
+      "name": "upblind",
+      "confidence": 0.5487443208694458
+    }
+  },
+  {
+    "text": "baja persiana",
+    "intent": "downblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.6906222701072693
+    }
+  },
+  {
+    "text": "¿qué hay?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "turnontv",
+      "confidence": 0.4841761887073517
+    }
+  },
+  {
+    "text": "Ola",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "statetv",
+      "confidence": 0.2571435570716858
+    }
+  },
+  {
+    "text": "venga, hasta luego",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "rungoogle",
+      "confidence": 0.18246932327747345
+    }
+  },
+  {
+    "text": "hasta luego",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "turnofflights",
+      "confidence": 0.42428648471832275
+    }
+  },
+  {
+    "text": "solo hazlo",
+    "intent": "afirmation",
+    "intent_prediction": {
+      "name": "negation",
+      "confidence": 0.30547934770584106
+    }
+  },
+  {
+    "text": "!televisor¡",
+    "intent": "statetv",
+    "intent_prediction": {
+      "name": "turnofftv",
+      "confidence": 0.787234902381897
+    }
+  },
+  {
+    "text": "muéstrame google",
+    "intent": "rungoogle",
+    "intent_prediction": {
+      "name": "upfewblind",
+      "confidence": 0.42160865664482117
+    }
+  },
+  {
+    "text": "no se escucha nada",
+    "intent": "turnonspeakers",
+    "intent_prediction": {
+      "name": "turnonlights",
+      "confidence": 0.7109740972518921
+    }
+  },
+  {
+    "text": "qué tan fuerte está el sonido",
+    "intent": "getvolumen",
+    "intent_prediction": {
+      "name": "upvolumen",
+      "confidence": 0.44068413972854614
+    }
+  },
+  {
+    "text": "¿qué tanto volumen hay?",
+    "intent": "getvolumen",
+    "intent_prediction": {
+      "name": "search",
+      "confidence": 0.22495168447494507
+    }
+  },
+  {
+    "text": "se escucha demasiado alto",
+    "intent": "downvolumen",
+    "intent_prediction": {
+      "name": "turnonspeakers",
+      "confidence": 0.8456105589866638
+    }
+  },
+  {
+    "text": "turn on luces",
+    "intent": "turnonlights",
+    "intent_prediction": {
+      "name": "turnofflights",
+      "confidence": 0.5894587635993958
+    }
+  },
+  {
+    "text": "turn off lights",
+    "intent": "turnofflights",
+    "intent_prediction": {
+      "name": "stopblind",
+      "confidence": 0.3213321268558502
+    }
+  },
+  {
+    "text": "que alguien suba esta persiana",
+    "intent": "upblind",
+    "intent_prediction": {
+      "name": "downblind",
+      "confidence": 0.7225937247276306
+    }
+  },
+  {
+    "text": "que alguien baje esta persiana",
+    "intent": "downblind",
+    "intent_prediction": {
+      "name": "downfewblind",
+      "confidence": 0.5012691617012024
+    }
+  },
+  {
+    "text": "que hacés?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "afirmation",
+      "confidence": 0.5436089634895325
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "searchyoutube",
+      "confidence": 0.19271714985370636
+    }
+  },
+  {
+    "text": "no lo hagas",
+    "intent": "negation",
+    "intent_prediction": {
+      "name": "afirmation",
+      "confidence": 0.6216315627098083
+    }
+  },
+  {
+    "text": "¿está encendido el monitor?",
+    "intent": "statetv",
+    "intent_prediction": {
+      "name": "stateengineblind",
+      "confidence": 0.45366159081459045
+    }
+  },
+  {
+    "text": "¿está encendida la pantalla?",
+    "intent": "statetv",
+    "intent_prediction": {
+      "name": "stateengineblind",
+      "confidence": 0.7566425800323486
+    }
+  },
+  {
+    "text": "¿cuál es el volumen actual?",
+    "intent": "getvolumen",
+    "intent_prediction": {
+      "name": "turnontv",
+      "confidence": 0.36991697549819946
+    }
+  },
+  {
+    "text": "persiana arriba",
+    "intent": "upblind",
+    "intent_prediction": {
+      "name": "downblind",
+      "confidence": 0.5414908528327942
     }
   },
   {
@@ -12,7 +508,15 @@
     "intent": "downblind",
     "intent_prediction": {
       "name": "downfewblind",
-      "confidence": 0.7831785678863525
+      "confidence": 0.7774816751480103
+    }
+  },
+  {
+    "text": "no subas la persiana",
+    "intent": "stopblind",
+    "intent_prediction": {
+      "name": "upblind",
+      "confidence": 0.7239581346511841
     }
   }
 ]

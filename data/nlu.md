@@ -278,7 +278,6 @@
 - arriba las luces
 - encender luces
 - prende las luces
-- turn on las luces
 - no se ve nada
 - no veo nada
 - nadie ve nada
