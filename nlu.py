@@ -14,7 +14,7 @@ import json
 
 
 # api-endpoint rasa
-URL = "http://localhost:5005/"
+URL = "http://localhost:5005/model/parse"
 
 
 
@@ -38,7 +38,10 @@ def start_bot_rasa():
     print('3. Run rasa bot')
     #rasa run --enable-api --log-file out.log
     os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run','--enable-api','--log-file','out.log')
-    time.sleep(10)    
+    time.sleep(10)   
+
+
+
 ##############
 ## MenQTT
 ###########
@@ -57,23 +60,98 @@ def on_message(client, userdata, msg):
         print("topic nlp recibido")
     print("publicar topico", msg.payload)
     payload = {"text": str(msg.payload)}
-    headers = {'Content-Type': "aplication/json",}
-    URL = "http://localhost:5005/model/parse"
+    headers = {'Content-Type': "aplication/json",}    
 
     payload = {"text": str(msg.payload)}
 
-    headers = {
-        'Content-Type': "application/json",
-        }
-    response = requests.request("POST", "http://localhost:5005/model/parse", data=json.dumps(payload), headers=headers)    
-
-    #print(response.json)
-    #print(response.text)
+    headers = {'Content-Type': "application/json",}
+    response = requests.request("POST", URL, data=json.dumps(payload), headers=headers)    
+    
+    
     data = response.json()
     print(data['intent']['name'])
+    intent = data['intent']['name']        
+    execute(client, intent, intent)
 
-    client.publish(msg.payload,msg.payload)
 
+# This execute the command by the intent that bot identify 
+# client is a client of mosquitto
+# intent the intent
+# search th argumento of search with google, youtube. 
+def execute(client, intent, search):
+    command = ''
+    if intent == 'statetv':       
+        command = 'acho/tv/power' 
+
+    if intent == 'upblind':
+        command = 'acho/blind/up'        
+
+    if intent == 'upfewblind':
+        command = 'acho/blind/up/few'
+
+    if intent == 'runskype':
+        command == 'acho/linux-commands/skype'
+
+    if intent == 'runfirefox':
+        command == 'acho/linux-commandos/firefox'
+
+    if intent == 'downblind':
+        command == 'acho/blind/down'
+
+    if intent == 'downfewblind':
+        command = 'acho/blind/down/few'
+
+    if intent == 'stopblind':
+        command = 'acho/blind/stop'
+
+    if intent == 'turnonlights':
+        command = 'acho/lights/on/all'
+
+    if intent == 'turnontv':
+        command = 'acho/tv/power'
+
+    if intent == 'turnofflights':
+        command = 'acho/lights/off/all'
+
+    if intent == 'turnofftv':
+        command = 'acho/tv/power'
+    
+    if intent == 'search':
+        command = 'acho/linux-commands/google'
+
+    if intent == 'searchyoutube':
+        command = 'acho/linux-commands/youtube'
+    
+    if intent == 'searchwiki':
+        command = 'acho/linux-commands/wikipedia'
+
+    if intent == 'rungoogle':
+        command = 'acho/linux-commands/google'
+    
+    if intent == 'statetv':
+        command = 'acho/tv/status'
+    
+    if intent == 'turnonspeakers':
+        command = 'acho/speakers/on'
+    
+    if intent == 'getvolumen':
+        command = 'acho/speakers/status'
+    
+    if intent == 'upvolumen':
+        command = 'acho/speakers/up'
+        search ='up'
+
+    if intent == 'downvolumen':
+        command = 'acho/speakers/down'
+
+    if intent == 'getstateblind':
+        command = 'acho/blind/status'
+
+    if intent == 'stateengineblind':
+        command = 'acho/blind/engine'
+        
+
+    client.publish(command, search)        
 
 
 #start_bot_rasa()

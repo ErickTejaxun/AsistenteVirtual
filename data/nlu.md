@@ -412,28 +412,68 @@
 - no muevas la persiana
 
 ## intent:runskype
-- abre [skype]
-- necesito [skype]
-- quiero que abras [skype]
-- levanta [skype]
-- run [skype]
-- lanza [skype]
-- ejecutar [skype]
-- ejecuta [skype]
-- usar [skype]
+- abre skype
+- necesito skype
+- quiero que abras skype
+- levanta skype
+- run skype
+- lanza skype
+- ejecutar skype
+- ejecuta skype
+- usar skype
 - Abre skype
+- abre videollamada
+- necesito videollamada
+- quiero que abras videollamada
+- levanta videollamada
+- run videollamada
+- lanza videollamada
+- ejecutar videollamada
+- ejecuta videollamada
+- usar videollamada
+- Abre videollamada
+- abre videoconferencia
+- necesito videoconferencia
+- quiero que abras videoconferencia
+- levanta videoconferencia
+- run videoconferencia
+- lanza videoconferencia
+- ejecutar videoconferencia
+- ejecuta videoconferencia
+- usar videoconferencia
+- Abre videoconferencia
 
 ## intent:runfirefox
-- abre [firefox]
-- necesito [firefox]
-- quiero que abras [firefox]
-- levanta [firefox]
-- run [firefox]
-- lanza [firefox]
-- ejecutar [firefox]
-- ejecuta [firefox]
-- usar [firefox]
-- [firefox]
+- abre navegador web
+- necesito navegador web
+- quiero que abras navegador web
+- levanta navegador web
+- run navegador web
+- lanza navegador web
+- ejecutar navegador web
+- ejecuta navegador web
+- usar navegador web
+- navegador web
+- abre mozila
+- necesito mozila
+- quiero que abras mozila
+- levanta mozila
+- run mozila
+- lanza mozila
+- ejecutar mozila
+- ejecuta mozila
+- usar mozila
+- mozila
+- abre la web
+- necesito la web
+- quiero que abras la web
+- levanta la web
+- run la web
+- lanza la web
+- ejecutar la web
+- ejecuta la web
+- usar la web
+- la web
 
 ## synonym:firefox
 - navegador web

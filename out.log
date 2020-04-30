@@ -349,3 +349,4 @@ Traceback (most recent call last):
   File "/home/erick/.local/lib/python3.6/site-packages/sanic/router.py", line 475, in _get
     raise NotFound("Requested URL {} not found".format(url))
 sanic.exceptions.NotFound: Requested URL /parse not found
+2020-04-30 15:50:55,728 [INFO ]  Starting Rasa server on http://localhost:5005
