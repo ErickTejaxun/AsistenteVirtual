@@ -5,9 +5,9 @@
 - buenas tardes
 - ¿cómo estás?
 - ¿qué hay?
-- ¿Cómo lo llevas?
+- ¿Como lo llevas?
 - ¿boot?
-- ¿estás allí?
+- ¿estas allí?
 - ¿hola qué hace?
 - como estás?
 - que hacés?
@@ -16,15 +16,33 @@
 - No, te estoy saludando
 - Qué haces
 - Ola
+- Que haces
 
-## intent:goodbye
+## intent:getWeather
+- dime la [temperadora](medicion) hay
+- dime la [humedad](medicion) 
+- que [temperadora](medicion) hay
+- dime el [nivel de co2](medicion) en la sala
+- [temperatura](medicion)
+- [nivel de co2](medicion)
+- [co2](medicion)
+- [humedad](medicion)
+- dime [pureza del aire](medicion)
+- muestra la [temperatura](medicion)
+- muestra la [humedad](medicion)
+- muestra el [nivel de co2](medicion)
+- [clima](medicion)
+- dame el [clima](medicion) de la sala
+- cuál es [el clima](medicion) de la sala
+
+## intent:goodby
 - adiós
 - nos vemos
 - venga, hasta luego
 - hasta luego
 - adiós!
 - que descanses
-- bueno, me voy
+- me voy
 - see you later
 - bye
 - chao
@@ -55,6 +73,9 @@
 - no lo hagas
 - no, hombre
 - ahora, no
+- negativo
+- te he dicho que no
+- para
 
 ## intent:statetv
 - television
@@ -163,25 +184,34 @@
 - Apaga pantalla
 
 ## intent:search
-- búscame en internet qué es [cualquiercosa]
-- [cualquiercosa] en internet
-- search [cualquiercosa]
-- búscame qué es [cualquiercosa]
-- navegar [cualquiercosa]
-- buscar [cualquiercosa]
-- google [cualquiercosa]
-- gogleame [cualquiercosa]
-- qué es [cualquiercosa]
+- búscame en internet qué es [cualquiercosa](topic)
+- [cualquiercosa](topic) en internet
+- search [cualquiercosa](topic)
+- búscame qué es [cualquiercosa](topic)
+- navegar [cualquiercosa](topic)
+- buscar [cualquiercosa](topic)
+- google [cualquiercosa](topic)
+- gogleame [cualquiercosa](topic)
+- ¿qué es [cualquiercosa](topic)?
+- necesito informacion sobre [caulquiercosa](topic)
+- ¿sabes algo sobre [cualquiercosa](topic)?
+- busca información de [cualquiercosa](topic)
+- resultados de [cualquiercosa](topic)
 
 ## intent:searchyoutube
-- búscame en youtube qué es [cualquiercosa]
-- [cualquiercosa]  en youtube
-- youtube [cualquiercosa]
-- búscame un vídeo de [cualquiercosa]
-- vídeo [cualquiercosa]
-- buscar vídeo [cualquiercosa]
-- ¿hay algún vídeo de[cualquiercosa]?
-- vídeo de [cualquiercosa]
+- búscame en youtube qué es [cualquiercosa](topic)
+- [cualquiercosa](topic)  en youtube
+- youtube [cualquiercosa](topic)
+- búscame un vídeo de [cualquiercosa](topic)
+- vídeo [cualquiercosa](topic)
+- buscar vídeo [cualquiercosa](topic)
+- ¿hay algún vídeo de [cualquiercosa](topic)?
+- vídeo de [cualquiercosa](topic)
+- busca un video de [cualquiercosa](topic)
+- quiero un video de [cualquiercosa](topic)
+- ¿has visto el video de [cualquiercosa](topic)?
+- videos de [cualquiercosa](topic)
+- ¿qué hay en youtube [cualquiercosa](topic)?
 
 ## intent:rungoogle
 - abre google
@@ -197,6 +227,8 @@
 - abréme google
 - abréme el búscador
 - voy a buscar algo
+- necesito información de algo
+- ¿Y si lo busco en internet?
 
 ## intent:turnonspeakers
 - enciende bocinas
@@ -214,7 +246,6 @@
 - necesito escuchar algo
 - no se escucha nada
 
-
 ## intent:getvolumen
 - muéstrame el volumen
 - ¿cuál es el nivel del volumen?
@@ -226,14 +257,12 @@
 - dime el nivel de las bocinas
 - dime el nivel de los speakers
 - quiero saber cuánto volumen tienen las bocinas
-- dime el nivel de las bocinas
 - ¿cuál es el volumen actual?
 - cuál es el nivel de volumen
 - muestráme el nivel de volumen
 - qué tan fuerte está el sonido
 - el nivel del sonido
 - ¿qué tanto volumen hay?
-
 
 ## intent:upvolumen
 - subir volumen
@@ -247,13 +276,13 @@
 - podrías darme más volumen?
 - podrías subirle al sonido?
 - casi no escucho, subele al volumen
-- necesito que suene más 
+- necesito que suene más
 - necesito más volumen en los parlantes
 - necesito más volumen en las bocinas
 - necesito más volumen en los speakers
 - sube el volumen
 - que le subas al volumen
-
+- sube
 
 ## intent:downvolumen
 - bajar volumen
@@ -284,25 +313,23 @@
 - prender focos
 - prender lámparas
 - enciende las lámparas
-- enciende las luces
 - arriba las lámparas
 - encerder las lámparas
 - prende las lámparas
 - por favor, enciende las luces
 - que me prendas las luces
-- necesito luz 
+- necesito luz
 - que no veo nada
 - quiero que enciendas las luces
 - quiero que enciendas las lámparas
 - necesito que prendas las luces
 - necesito que enciedas las lámparas
 - no veo nada, enciende las luces
-- no se ve nada
 - turn on luces
 - turn on lámparas
 - turn on lights
 - enciende todas esas luces
-
+- Luces
 
 ## intent:turnofflights
 - apagar luces
@@ -321,7 +348,7 @@
 - apagáme las lámparas
 - por favor, apaga las luces
 - que me apagues las luces
-- no necesito luz 
+- no necesito luz
 - quiero que apagues las luces
 - quiero que me apagues las lámparas
 - necesito que bajes las luces
@@ -330,7 +357,6 @@
 - turn off lámparas
 - turn off lights
 - apagáme todas esas luces
-
 
 ## intent:getstateblind
 - ¿cómo están las persianas?
@@ -344,6 +370,7 @@
 - Posición persiana
 - Persiana
 - Estado de las persianas
+- Estado persianas
 
 ## intent:stateengineblind
 - ¿se mueven las persianas?
@@ -364,6 +391,8 @@
 - persiana arriba
 - que alguien suba esta persiana
 - persiana up
+- sube esas persianas
+- quiero ver lo que hay fuera
 
 ## intent:upfewblind
 - sube la persiana un poco
@@ -373,6 +402,10 @@
 - persiana un poco arriba
 - sube un poco la persiana
 - persianas a la mitad
+- no subas mucho las persianas
+- sube un poquito esas persianas
+- sube un poco las persianas
+- no subas tanto las persianas
 
 ## intent:downfewblind
 - baja un poco la persiana
@@ -383,6 +416,9 @@
 - que alguien baje un poco la persiana
 - abajo persiana
 - no bajes mucho la persiana
+- baja poquito las persianas
+- no bajes tanto las persianas
+- baja las persianas un poquito
 
 ## intent:downblind
 - baja la persiana
@@ -475,42 +511,84 @@
 - usar la web
 - la web
 
+## intent:login
+- ingresar [id](username) [password] [pass](password)
+- entrar con [id](username) [password] [pass](password)
+- login [id](username) [password] [pass](password)
+- login con [id](username) [password] [pass](password)
+- iniciar sesión con [id](username) [password] [pass](password)
+- quiero entrar con [id](username) [password] [pass](password)
+- ingresar con usuario [id](username)  [password] [pass](password)
+- iniciar sesion [acho](username) password  [pass](password)
+- login con [acho](username) [password] [pass](password)
+- entrar como [administrador](username) [password] [pass](password)
+- iniciar con [admin](username) [password] [pass](password)
+- ingresar con [username](username) [password] [pass](password)
+
+## intent:getTime
+- hora
+- qué hora es
+- ¿tienes hora?
+- dime la hora
+- dame la hora
+- hora actual
+- ¿qué hora tienes?
+- time
+
+## intent:getDate
+- fecha
+- fecha de hoy
+- ¿qué fecha es hoy?
+- dime la fecha
+- dame la fecha actual
+- dame la fecha de hoy
+- quiero saber la fecha
+- qué día es hoy
+
+## synonym:password
+- password
+- contraseña
+- clave
+
 ## synonym:firefox
-- navegador web
 - mozila
 - fairfox
-- firefox
 - navegador
+- navegador web
+- firefox
 
 ## synonym:ligths
-- el foco
-- la bombilla
-- las bombillas
-- la luz
-- los focos
 - todas las luces
+- los focos
+- las bombillas
+- el foco
 - las luces
+- la luz
+- la bombilla
 
 ## synonym:skype
 - videollamada
 - skype
 
 ## synonym:speakers
-- bocinas
-- altoparlante
+- spakers
 - altoparlantes
 - bocina
-- spakers
+- bocinas
+- altoparlante
 
 ## synonym:tv
-- pantalla
-- el televisor
 - la pantalla
-- teve
-- el teve
+- el televisor
+- televisor
 - monitor
 - el monitor
-- televisor
+- teve
+- pantalla
+- el teve
 
-## regex:cualquiercosa
-- [^\n]
+## regex:id
+- [a-z]+
+
+## regex:pass
+- [^\\s]*

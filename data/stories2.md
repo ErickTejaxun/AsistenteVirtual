@@ -1,17 +1,8 @@
-## iniciar sesion
-* greet
-  -utter_saludo
-* login
-  -action_login_init
-  > sesion_iniciada
-
 ## preguntar por el clima
-> sesion_iniciada
 * getWeather
   -action_get_weather
 
 ## preguntar por tv
-> sesion_iniciada
 * statetv
   - action_statetv
 
@@ -23,119 +14,96 @@
 * getDate
   - action_getDate
 
-## saludar
-> sesion_iniciada 
+## saludar 
 * greet 
  - utter_saludo
 
 ## despedir
-> sesion_iniciada
 * goodbye
  - utter_despedir
 
 
 ## encender tv
-> sesion_iniciada
 * turnontv
   - utter_turnontv
 
 ## apagar tv
-> sesion_iniciada
 * turnofftv
   - utter_turnofftv
 
 ## buscar en internet
-> sesion_iniciada
 * search
   - utter_search
 
 ## buscar en youtube
-> sesion_iniciada
 * searchyoutube
   - utter_searchyoutube
   
 ## lanzar google
-> sesion_iniciada
 * rungoogle
   - utter_rungoogle
 
 ## encender speakers
-> sesion_iniciada
 * turnonspeakers
   - utter_turnonspeakers
 
 ## obtener volumen speakers
-> sesion_iniciada
 * getvolumen
   - utter_getvolumen
 
 ## subir volumen speakers
-> sesion_iniciada
 * upvolumen
   - utter_upvolumen
 
 ## bajar volumen speakers
-> sesion_iniciada
 * downvolumen
   - utter_downvolumen
 
 ## encender luces
-> sesion_iniciada
 * turnonlights
   - utter_turnonlights
 
 ## apagar luces
-> sesion_iniciada
 * turnofflights
   - utter_turnofflights
 
 ## estado de las persianas
-> sesion_iniciada
 * getstateblind
   - utter_getstateblind
 
 ## estado motor de las persianas
-> sesion_iniciada
 * stateengineblind
   - utter_getstateengineblind
 
 ## subir persianas
-> sesion_iniciada
 * upblind
   - utter_upblind
 
 ## bajar persianas
-> sesion_iniciada
 * downblind
   - utter_downblind
 
 ## subir poco las persianas
-> sesion_iniciada
 * upfewblind
   - utter_upfewblind
 
 ## bajar poco las persianas
-> sesion_iniciada
 * downfewblind
   - utter_downfewblind
 
 ## detener motor persianas
-> sesion_iniciada
 * stopblind
   - utter_stopblind
 
 ## ejecutar skype
-> sesion_iniciada
 * runskype
   - utter_runskype
 
 ## ejectuar navegador
-> sesion_iniciada
 * runfirefox
   - utter_runfirefox
 
 ## interactive_story_1
-> sesion_iniciada
 * greet
     - utter_saludo
 * turnontv

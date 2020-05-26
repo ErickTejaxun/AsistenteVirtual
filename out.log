@@ -350,3 +350,191 @@ Traceback (most recent call last):
     raise NotFound("Requested URL {} not found".format(url))
 sanic.exceptions.NotFound: Requested URL /parse not found
 2020-04-30 15:50:55,728 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 11:16:20,421 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 11:54:05,129 [ERROR]  Encountered an exception while running action 'action_login'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-25 11:58:55,827 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 12:25:11,952 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 12:26:14,521 [ERROR]  Encountered an exception while running action 'action_login'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-25 13:15:32,091 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 13:15:43,830 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:15:43,831 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:16:02,357 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:16:02,357 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:16:02,358 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:16:02,358 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:16:05,502 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:16:05,502 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:16:05,502 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:16:05,502 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:16:05,784 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:16:05,784 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:16:05,785 [WARNI]  Feature 'intent_choose' could not be found in feature map.
+2020-05-25 13:16:05,785 [WARNI]  Feature 'entity_color' could not be found in feature map.
+2020-05-25 13:23:29,007 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 13:48:33,457 [ERROR]  Encountered an exception while running action 'action_login_init'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-25 14:00:12,132 [ERROR]  Exception when trying to handle message.'dict' object has no attribute 'split'
+2020-05-25 14:00:12,161 [ERROR]  Exception occurred while handling uri: 'http://fdbd4815.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 252, in message
+    metadata=metadata,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 35, in send_text_message
+    for message_part in text.split("\n\n"):
+AttributeError: 'dict' object has no attribute 'split'
+2020-05-25 14:00:14,532 [ERROR]  Exception when trying to handle message.'dict' object has no attribute 'split'
+2020-05-25 14:00:14,533 [ERROR]  Exception occurred while handling uri: 'http://fdbd4815.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 252, in message
+    metadata=metadata,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 35, in send_text_message
+    for message_part in text.split("\n\n"):
+AttributeError: 'dict' object has no attribute 'split'
+2020-05-25 14:00:18,927 [ERROR]  Exception when trying to handle message.'dict' object has no attribute 'split'
+2020-05-25 14:00:18,928 [ERROR]  Exception occurred while handling uri: 'http://fdbd4815.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 252, in message
+    metadata=metadata,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 35, in send_text_message
+    for message_part in text.split("\n\n"):
+AttributeError: 'dict' object has no attribute 'split'
+2020-05-25 14:00:27,416 [ERROR]  Exception when trying to handle message.'dict' object has no attribute 'split'
+2020-05-25 14:00:27,417 [ERROR]  Exception occurred while handling uri: 'http://fdbd4815.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 252, in message
+    metadata=metadata,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 35, in send_text_message
+    for message_part in text.split("\n\n"):
+AttributeError: 'dict' object has no attribute 'split'
+2020-05-25 14:00:39,113 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 14:01:16,938 [ERROR]  Exception when trying to handle message.'dict' object has no attribute 'split'
+2020-05-25 14:01:16,940 [ERROR]  Exception occurred while handling uri: 'http://fdbd4815.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 252, in message
+    metadata=metadata,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 35, in send_text_message
+    for message_part in text.split("\n\n"):
+AttributeError: 'dict' object has no attribute 'split'
+2020-05-25 14:02:18,063 [ERROR]  Exception when trying to handle message.'dict' object has no attribute 'split'
+2020-05-25 14:02:18,064 [ERROR]  Exception occurred while handling uri: 'http://fdbd4815.ngrok.io/webhooks/telegram/webhook'
+Traceback (most recent call last):
+  File "/home/erick/.local/lib/python3.6/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 252, in message
+    metadata=metadata,
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 83, in handler
+    await app.agent.handle_message(*args, **kwargs)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/agent.py", line 486, in handle_message
+    return await processor.handle_message(message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 107, in handle_message
+    await self._predict_and_execute_next_action(message.output_channel, tracker)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 506, in _predict_and_execute_next_action
+    action, tracker, output_channel, self.nlg, policy, confidence
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 617, in _run_action
+    await self._send_bot_messages(events, tracker, output_channel)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/processor.py", line 546, in _send_bot_messages
+    await output_channel.send_response(tracker.sender_id, e.message())
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/channel.py", line 186, in send_response
+    await self.send_text_message(recipient_id, message.pop("text"), **message)
+  File "/home/erick/.local/lib/python3.6/site-packages/rasa/core/channels/telegram.py", line 35, in send_text_message
+    for message_part in text.split("\n\n"):
+AttributeError: 'dict' object has no attribute 'split'
+2020-05-25 14:03:07,307 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 14:03:18,601 [ERROR]  Encountered an exception while running action 'action_login_init'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-25 14:04:59,247 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 14:17:37,296 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 14:17:59,454 [ERROR]  Encountered an exception while running action 'action_login_init'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-25 15:19:03,660 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 16:26:59,843 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 16:32:39,953 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 16:35:40,613 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 16:39:04,402 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-25 16:48:40,330 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 16:28:35,410 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 16:29:46,511 [ERROR]  Encountered an exception while running action 'action_login'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-26 17:39:36,106 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 19:37:30,640 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 19:38:05,691 [ERROR]  Encountered an exception while running action 'action_login_init'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-26 19:40:12,052 [ERROR]  Encountered an exception while running action 'action_login_init'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-05-26 19:48:35,536 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 19:57:03,245 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 20:06:27,838 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-05-26 20:17:57,060 [INFO ]  Starting Rasa server on http://localhost:5005

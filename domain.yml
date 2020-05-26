@@ -1,29 +1,6 @@
-actions:
-- action_statetv
-- utter_despedir
-- utter_downblind
-- utter_downfewblind
-- utter_downvolumen
-- utter_getstateblind
-- utter_getstateengineblind
-- utter_getvolumen
-- utter_runfirefox
-- utter_rungoogle
-- utter_runskype
-- utter_saludo
-- utter_search
-- utter_searchyoutube
-- utter_stopblind
-- utter_turnofflights
-- utter_turnofftv
-- utter_turnonlights
-- utter_turnonspeakers
-- utter_turnontv
-- utter_upblind
-- utter_upfewblind
-- utter_upvolumen
-entities:
-- monitor
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
 intents:
 - turnontv
 - greet
@@ -50,7 +27,27 @@ intents:
 - runskype
 - runfirefox
 - goodbye
+- getTime
+- getDate
+- login
+- getWeather
+entities:
+- monitor
+- username
+- password
+- topic
+slots:
+  username:
+    type: text
+    initial_value: user
 responses:
+  utter_saludo:
+  - text: "Hola, me llamo bot, el asiste del sistema ACHO. Debes iniciar sesión para
+      poder acceder al sistema. Indica que quieres iniciar sesión con la frase 'iniciar
+      sesión con <nombre de usuario> clave <password>'"
+  - text: "Hola, ¿cómo estás?, ¿qué deseas realizar?Debes iniciar sesión para poder
+      acceder al sistema. Indica que quieres iniciar sesión con la frase 'iniciar
+      sesión con <nombre de usuario> clave <password>'"
   action_statetv:
   - text: El monitor se encuentra
   utter_despedir:
@@ -76,9 +73,6 @@ responses:
   - text: Lanzando google
   utter_runskype:
   - text: Ejecutando skype
-  utter_saludo:
-  - text: Hola, me llamo bot.
-  - text: Hola, ¿cómo estás?.
   utter_search:
   - text: Abriendo navegador con tu búsqueda
   utter_searchyoutube:
@@ -101,6 +95,33 @@ responses:
   - text: Subiendo un poco las persianas
   utter_upvolumen:
   - text: Subiendo volumen de speakers
-session_config:
-  carry_over_slots_to_new_session: true
-  session_expiration_time: 60.0
+  action_getDate:
+  - text: La fecha actual es
+actions:
+- action_getTime
+- action_getDate
+- action_statetv
+- action_login_init
+- action_get_weather
+- utter_despedir
+- utter_downblind
+- utter_downfewblind
+- utter_downvolumen
+- utter_getstateblind
+- utter_getstateengineblind
+- utter_getvolumen
+- utter_runfirefox
+- utter_rungoogle
+- utter_runskype
+- utter_saludo
+- utter_search
+- utter_searchyoutube
+- utter_stopblind
+- utter_turnofflights
+- utter_turnofftv
+- utter_turnonlights
+- utter_turnonspeakers
+- utter_turnontv
+- utter_upblind
+- utter_upfewblind
+- utter_upvolumen

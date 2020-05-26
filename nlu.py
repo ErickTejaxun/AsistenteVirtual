@@ -1,16 +1,19 @@
+#!/usr/bin/env python3
+
+
 #Natural Language Processor for ACHO
 # -*- coding: utf-8 -*-
-# Get the data from mosquito suscription and reward to rasa. 
+# Get the data from mosquito suscription and reward to rasa.
 #
 
 import time
 import paho.mqtt.client as mqtt
-import os 
+import os
 import subprocess
 from subprocess import Popen, PIPE
 import requests
 import json
-
+import os
 
 
 # api-endpoint rasa
@@ -21,24 +24,25 @@ URL = "http://localhost:5005/model/parse"
 def start_bot_rasa():
     print("Starting rasa bot.")
     print("1. Starting ngk redirect server")
-
+    pathActual  = os.path.dirname(__file__)
+    
     #Agregando permisos de ejecución
-    #os.spawnlp(os.P_NOWAIT, 'chmod', 'chmod', '+x', './ngrok')
+    #os.spawnlp(os.P_NOWAIT, 'chmod', 'chmod', '+x', pathActual+'/ngrok')
 
     #Run this if run telegram
-    ##os.spawnlp(os.P_NOWAIT, 'ngrok', './ngrok', 'http', '5005')
+    
+    #os.spawnlp(os.P_NOWAIT, 'ngrok', pathActual+'/ngrok', 'http', '5005')
     #time.sleep(5)
 
-    print("2. Run rasa endpoint for the action bot")   
-
-    os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run', 'actions')    
+    print("2. Run rasa endpoint for the action bot")
+    #os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run', 'actions')
     time.sleep(10)
 
 
     print('3. Run rasa bot')
     #rasa run --enable-api --log-file out.log
-    os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run','--enable-api','--log-file','out.log')
-    time.sleep(10)   
+    #os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run','--enable-api','--log-file','out.log')
+    time.sleep(10)
 
 
 
@@ -56,35 +60,35 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    if(msg.topic=="acho/nlp"):   
+    if(msg.topic=="acho/nlp"):
         print("topic nlp recibido")
     print("publicar topico", msg.payload)
     payload = {"text": str(msg.payload)}
-    headers = {'Content-Type': "aplication/json",}    
+    headers = {'Content-Type': "aplication/json",}
 
     payload = {"text": str(msg.payload)}
 
     headers = {'Content-Type': "application/json",}
-    response = requests.request("POST", URL, data=json.dumps(payload), headers=headers)    
-    
-    
+    response = requests.request("POST", URL, data=json.dumps(payload), headers=headers)
+
+
     data = response.json()
     print(data['intent']['name'])
-    intent = data['intent']['name']        
+    intent = data['intent']['name']
     execute(client, intent, intent)
 
 
-# This execute the command by the intent that bot identify 
+# This execute the command by the intent that bot identify
 # client is a client of mosquitto
 # intent the intent
-# search th argumento of search with google, youtube. 
+# search th argumento of search with google, youtube.
 def execute(client, intent, search):
     command = ''
-    if intent == 'statetv':       
-        command = 'acho/tv/power' 
+    if intent == 'statetv':
+        command = 'acho/tv/power'
 
     if intent == 'upblind':
-        command = 'acho/blind/up'        
+        command = 'acho/blind/up'
 
     if intent == 'upfewblind':
         command = 'acho/blind/up/few'
@@ -115,28 +119,28 @@ def execute(client, intent, search):
 
     if intent == 'turnofftv':
         command = 'acho/tv/power'
-    
+
     if intent == 'search':
         command = 'acho/linux-commands/google'
 
     if intent == 'searchyoutube':
         command = 'acho/linux-commands/youtube'
-    
+
     if intent == 'searchwiki':
         command = 'acho/linux-commands/wikipedia'
 
     if intent == 'rungoogle':
         command = 'acho/linux-commands/google'
-    
+
     if intent == 'statetv':
         command = 'acho/tv/status'
-    
+
     if intent == 'turnonspeakers':
         command = 'acho/speakers/on'
-    
+
     if intent == 'getvolumen':
         command = 'acho/speakers/status'
-    
+
     if intent == 'upvolumen':
         command = 'acho/speakers/up'
         search ='up'
@@ -149,9 +153,8 @@ def execute(client, intent, search):
 
     if intent == 'stateengineblind':
         command = 'acho/blind/engine'
-        
 
-    client.publish(command, search)        
+    client.publish(command, search)
 
 
 #start_bot_rasa()
