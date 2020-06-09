@@ -27,21 +27,21 @@ def start_bot_rasa():
     pathActual  = os.path.dirname(__file__)
     
     #Agregando permisos de ejecución
-    #os.spawnlp(os.P_NOWAIT, 'chmod', 'chmod', '+x', pathActual+'/ngrok')
+    os.spawnlp(os.P_NOWAIT, 'chmod', 'chmod', '+x', pathActual+'/ngrok')
 
     #Run this if run telegram
     
-    #os.spawnlp(os.P_NOWAIT, 'ngrok', pathActual+'/ngrok', 'http', '5005')
-    #time.sleep(5)
+    os.spawnlp(os.P_NOWAIT, 'ngrok', pathActual+'/ngrok', 'http', '5005')
+    time.sleep(5)
 
     print("2. Run rasa endpoint for the action bot")
-    #os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run', 'actions')
+    os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run', 'actions')
     time.sleep(10)
 
 
     print('3. Run rasa bot')
     #rasa run --enable-api --log-file out.log
-    #os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run','--enable-api','--log-file','out.log')
+    os.spawnlp(os.P_NOWAIT, 'rasa', 'rasa', 'run','--enable-api','--log-file','out.log')
     time.sleep(10)
 
 
@@ -53,7 +53,6 @@ def start_bot_rasa():
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
 	print("Connected with result code "+str(rc))
-
 	# Subscribing in on_connect() means that if we lose the connection and
 	# reconnect then subscriptions will be renewed.
 	client.subscribe("acho/nlp/#")
@@ -70,7 +69,6 @@ def on_message(client, userdata, msg):
 
     headers = {'Content-Type': "application/json",}
     response = requests.request("POST", URL, data=json.dumps(payload), headers=headers)
-
 
     data = response.json()
     print(data['intent']['name'])

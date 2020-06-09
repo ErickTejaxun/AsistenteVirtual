@@ -14,6 +14,39 @@ from datetime import date
 seed(1)
 
 
+# The callback for when the client receives a CONNACK response from the server.
+def on_connect(client, userdata, flags, rc):
+	print("Connected with result code "+str(rc))
+	# Subscribing in on_connect() means that if we lose the connection and
+	# reconnect then subscriptions will be renewed.
+	client.subscribe("acho/nlp/#")
+
+def execute(client, intent, search):
+    client.publish(intent, search)
+
+# The callback for when a PUBLISH message is received from the server.
+def on_message(client, userdata, msg):
+    if(msg.topic=="acho/nlp"):
+        print("topic nlp recibido")
+    print("publicar topico", msg.payload)
+    payload = {"text": str(msg.payload)}
+    headers = {'Content-Type': "aplication/json",}
+
+    payload = {"text": str(msg.payload)}
+
+    headers = {'Content-Type': "application/json",}
+    response = requests.request("POST", URL, data=json.dumps(payload), headers=headers)
+
+    data = response.json()
+    print(data['intent']['name'])
+    intent = data['intent']['name']
+    execute(client, intent, intent)    
+
+#start_bot_rasa()
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
+
 class ActionHelloWorld(Action):
     def name(self) -> Text:
         return "action_hello_world"
@@ -113,3 +146,17 @@ class ActionGetWeather(Action):
         mensaje = "La hora actual es " + current_date        
         dispatcher.utter_message(text=mensaje)
         return []
+
+class Action(Action):
+    def name(self) -> Text:
+        return "action_get_weather"
+    def run(self, 
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        today = date.today()        
+        current_date = today.strftime("%d/%m/%Y")                     
+        mensaje = "La hora actual es " + current_date        
+        dispatcher.utter_message(text=mensaje)
+        return []        
