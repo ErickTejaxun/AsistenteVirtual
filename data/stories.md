@@ -37,12 +37,12 @@
 ## encender tv
 > sesion_iniciada
 * turnontv
-  - utter_turnontv
+  - action_turnontv
 
 ## apagar tv
 > sesion_iniciada
 * turnofftv
-  - utter_turnofftv
+  - action_turnofftv
 
 ## buscar en internet
 > sesion_iniciada
@@ -62,37 +62,42 @@
 ## encender speakers
 > sesion_iniciada
 * turnonspeakers
-  - utter_turnonspeakers
+  - action_turnonspeakers
+
+## apagar speakers
+> sesion_iniciada
+* turnoffspeakers
+  - action_turnoffspeakers  
 
 ## obtener volumen speakers
 > sesion_iniciada
 * getvolumen
-  - utter_getvolumen
+  - action_getvolumen
 
 ## subir volumen speakers
 > sesion_iniciada
 * upvolumen
-  - utter_upvolumen
+  - action_upvolumen
 
 ## bajar volumen speakers
 > sesion_iniciada
 * downvolumen
-  - utter_downvolumen
+  - action_downvolumen
 
 ## encender luces
 > sesion_iniciada
 * turnonlights
-  - utter_turnonlights
+  - action_turnonlights
 
 ## apagar luces
 > sesion_iniciada
 * turnofflights
-  - utter_turnofflights
+  - action_turnofflights
 
 ## estado de las persianas
 > sesion_iniciada
 * getstateblind
-  - utter_getstateblind
+  - action_getstateblind
 
 ## estado motor de las persianas
 > sesion_iniciada
@@ -102,22 +107,22 @@
 ## subir persianas
 > sesion_iniciada
 * upblind
-  - utter_upblind
+  - action_upblind
 
 ## bajar persianas
 > sesion_iniciada
 * downblind
-  - utter_downblind
+  - action_downblind
 
 ## subir poco las persianas
 > sesion_iniciada
 * upfewblind
-  - utter_upfewblind
+  - action_upfewblind
 
 ## bajar poco las persianas
 > sesion_iniciada
 * downfewblind
-  - utter_downfewblind
+  - action_downfewblind
 
 ## detener motor persianas
 > sesion_iniciada
@@ -134,8 +139,4 @@
 * runfirefox
   - utter_runfirefox
 
-## interactive_story_1
-> sesion_iniciada
-* greet
-    - utter_saludo
-* turnontv
+

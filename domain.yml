@@ -12,6 +12,7 @@ intents:
 - searchyoutube
 - rungoogle
 - turnonspeakers
+- turnoffspeakers
 - getvolumen
 - upvolumen
 - downvolumen
@@ -36,6 +37,7 @@ entities:
 - username
 - password
 - topic
+- medicion
 slots:
   username:
     type: text
@@ -48,21 +50,13 @@ responses:
   - text: "Hola, ¿cómo estás?, ¿qué deseas realizar?Debes iniciar sesión para poder
       acceder al sistema. Indica que quieres iniciar sesión con la frase 'iniciar
       sesión con <nombre de usuario> clave <password>'"
-  action_statetv:
-  - text: El monitor se encuentra
   utter_despedir:
   - text: Adiós.
   - text: Venga, hasta luego.
   - text: Bye
   - text: Nos vemos
-  utter_downblind:
-  - text: Bajando las persianas.
-  utter_downfewblind:
-  - text: Bajando un poco las persianas
   utter_downvolumen:
   - text: Bajando volumen speakers
-  utter_getstateblind:
-  - text: Las persinas se encuentan en este nivel
   utter_getstateengineblind:
   - text: Las persianas se están moviendo
   utter_getvolumen:
@@ -79,20 +73,6 @@ responses:
   - text: Abriendo youtube con tu búsqueda
   utter_stopblind:
   - text: Se han detenido las persianas
-  utter_turnofflights:
-  - text: Apagando luces de robolab
-  utter_turnofftv:
-  - text: Apagando pantalla
-  utter_turnonlights:
-  - text: Encendiendo luces de robolab
-  utter_turnonspeakers:
-  - text: Encendiendo los speakers
-  utter_turnontv:
-  - text: Enciendendo pantalla
-  utter_upblind:
-  - text: Subiendo las persianas.
-  utter_upfewblind:
-  - text: Subiendo un poco las persianas
   utter_upvolumen:
   - text: Subiendo volumen de speakers
   action_getDate:
@@ -103,13 +83,21 @@ actions:
 - action_statetv
 - action_login_init
 - action_get_weather
-- utter_despedir
-- utter_downblind
-- utter_downfewblind
-- utter_downvolumen
-- utter_getstateblind
+- action_turnofftv
+- action_turnontv
+- action_turnonspeakers
+- action_turnoffspeakers
+- action_upvolumen
+- action_downvolumen
+- action_getvolumen
+- action_downblind
+- action_downfewblind
+- action_getstateblind
+- action_upblind
+- action_upfewblind
+- action_turnofflights
+- action_turnonlights
 - utter_getstateengineblind
-- utter_getvolumen
 - utter_runfirefox
 - utter_rungoogle
 - utter_runskype
@@ -117,11 +105,4 @@ actions:
 - utter_search
 - utter_searchyoutube
 - utter_stopblind
-- utter_turnofflights
-- utter_turnofftv
-- utter_turnonlights
-- utter_turnonspeakers
-- utter_turnontv
-- utter_upblind
-- utter_upfewblind
-- utter_upvolumen
+- utter_despedir

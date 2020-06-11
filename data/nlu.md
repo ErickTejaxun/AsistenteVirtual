@@ -246,6 +246,22 @@
 - necesito escuchar algo
 - no se escucha nada
 
+## intent:turnoffspeakers
+- apaga bocinas
+- turn off bocinas
+- apágame las bocinas
+- apaga las bocinas
+- turn off las bocinas
+- apaga el altoparlante
+- turn off altoparlante
+- apágame el altoparlante
+- apaga speakers
+- turn off speakers
+- apágame los speakers
+- necesito que apages las bocinas
+- ya no quiero escuchar nada
+
+
 ## intent:getvolumen
 - muéstrame el volumen
 - ¿cuál es el nivel del volumen?
@@ -282,7 +298,6 @@
 - necesito más volumen en los speakers
 - sube el volumen
 - que le subas al volumen
-- sube
 
 ## intent:downvolumen
 - bajar volumen

@@ -1,5 +1,6 @@
 
 import paho.mqtt.client as mqtt
+import time
 
 
 estado_tv = 0 # Inicia apagado
@@ -11,16 +12,18 @@ estados_elementos = [0,0,0,0,0,0,0,0]
 #[0.estado_tv, 1.estado_bocinas, 2.nivel_volumen, 3.nivel_persiana,4.statebliend,5.Luces]
 # El callback cuando el cliente se conecta al broker
 def on_connect(client, userdata, flags, rc):  
-    #print("Connected with result code {0}".format(str(rc)))  # Debug
-    client.subscribe("acho/#")  # Nos suscribimos a toso los tópicos 
+    print("Connected with result code {0}".format(str(rc)))  # Debug
+    client.subscribe("acho/#")  # Nos suscribimos a toso los tópicos
+    print("Suscrito al tópico acho/#") 
 
 # El callback cuando haya una publicación recibida desde el servidor
 #mosquitto_sub -h localhost -t ACHO/# para suscribirse
 #mosquitto_pub -h localhost -t ACHO/tv/power -m "on" para enviar mensajes
 def on_message(client, userdata, msg):      
-    mensaje = ''    
+    mensaje = "" 
+    #print(msg.topic)
     payload = str(msg.payload)
-    partes = payload.split("\'")
+    partes = payload.split("\'")    
     #Manejo de estado del monitor
     if(msg.topic == 'acho/tv/power'):        
         estado_tv = estados_elementos[0]
@@ -40,6 +43,15 @@ def on_message(client, userdata, msg):
                 mensaje = 'El monitor se encuentra apagado'  
         estados_elementos[0] = estado_tv
     
+    #Manejo de estado del monitor
+    if(msg.topic == 'acho/tv/status'):        
+        estado_tv = estados_elementos[0]
+        if(estado_tv==1):                
+            mensaje = 'El monitor se encuentra prendido.'
+        else:            
+            mensaje = 'El monitor se encuentra apagado.'
+
+
     #Manejo de las persianas
     if(msg.topic == 'acho/blind/up'):
         nivel_persiana = estados_elementos[3]
@@ -83,8 +95,7 @@ def on_message(client, userdata, msg):
             estados_elementos[3] = nivel_persiana
         else:
             mensaje = 'No se pueden subir más las persinas. Nivel '+str(nivel_persiana) +"/10."   
-
-    '''
+    
     #command = 'acho/blind/status' 
     if(msg.topic == 'acho/blind/status'):
         nivel_persiana = estados_elementos[3]            
@@ -192,20 +203,25 @@ def on_message(client, userdata, msg):
                 nivel_volumen =0
                 mensaje = 'El volumen está al mínimo. El volumen actual es de ' +str(nivel_volumen)+ "/100."
         estados_elementos[2] = nivel_volumen                        
-    '''
+    
+    #print("Message received-> " + msg.topic + " " + str(msg.payload))  # Print a received msg
     #Mandamos el mensaje
     if(msg.topic!="acho/nlu"):
         client.publish("acho/nlu", mensaje) 
-    print(mensaje)
-    #print("Message received-> " + msg.topic + " " + str(msg.payload))  # Print a received msg
+    #print("topic origen: "+ msg.topic + "\t"+mensaje)    
 
 
 
-
-estado_tv = 0
-client = mqtt.Client("mqtt_simulate")  # Create instance of client with client ID “mqtt_simulate”
-client.on_connect = on_connect  
-client.on_message = on_message  
+#start_bot_rasa()
+client = mqtt.Client()
+client.on_connect = on_connect
+client.on_message = on_message
 #client.connect("salareuniones.local", 1883, 60)
 client.connect("localhost")
-client.loop_forever()  # Start networking daemon
+print ("Connected to Mosquitto broker")
+
+while True:
+	try:
+		client.loop_forever()
+	except:
+		time.sleep(5)
